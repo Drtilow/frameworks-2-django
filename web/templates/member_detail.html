@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ member.name }}</h1>
+<p>Email: {{ member.email }}</p>
+<p>Popis: {{ member.bio }}</p>
+<a href="{% url 'member_list' %}">Zpět na seznam členů</a>
+{% endblock %}

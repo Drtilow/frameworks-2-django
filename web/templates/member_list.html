@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Seznam členů</h1>
+<ul>
+    {% for member in members %}
+        <li><a href="{% url 'member_detail' member.id %}">{{ member.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
